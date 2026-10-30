@@ -76,6 +76,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcrypto_shim.so'),
     'system_ext/etc/init/wfdservice.rc': blob_fixup()
         .regex_replace(r'(start|stop) wfdservice\b', r'\1 wfdservice64'),
+    'system_ext/lib64/libwfdcommonutils.so': blob_fixup()
+        .remove_needed('libheif.so'),
     'system_ext/lib64/libwfdmmsrc_system.so': blob_fixup()
         .add_needed('libgui_shim.so'),
     'system_ext/lib64/libwfdnative.so': blob_fixup()
