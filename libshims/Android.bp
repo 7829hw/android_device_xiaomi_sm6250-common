@@ -1,0 +1,16 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "libwfdaudio_shim",
+    srcs: ["libwfdaudio_shim.cpp"],
+    shared_libs: [
+        "android.media.audio.common.types-V5-cpp",
+        "libaudiobase",
+        "libaudioclient",
+        "libutils",
+    ],
+    system_ext_specific: true,
+}
