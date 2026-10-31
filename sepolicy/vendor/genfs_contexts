@@ -1,6 +1,9 @@
 # Display
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/idle_state                                                             u:object_r:vendor_sysfs_graphics:s0
 
+# Subsystem restart
+genfscon sysfs /devices/platform/soc/9800000.qcom,npu/subsys6/name                                                                u:object_r:vendor_sysfs_ssr:s0
+
 # Health
 genfscon sysfs /class/power_supply/battery/capacity                                                                               u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify                                                   u:object_r:vendor_sysfs_battery_supply:s0
